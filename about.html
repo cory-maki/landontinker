@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>About | Landon Tinker</title>
+<meta name="description" content="Learn about Landon Tinker's path from Dallas to Texas A&amp;M construction science, his internships with David Weekley Homes and Shellback Construction, and seven years of volunteer homebuilding in Costa Rica."/>
+<link rel="canonical" href="https://landontinker.netlify.app/about.html"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/style.css"/>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+(function(){
+  const _sb=supabase.createClient('https://aowblircaymwuymcmllh.supabase.co','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFvd2JsaXJjYXltd3V5bWNtbGxoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTIzMzExMjcsImV4cCI6MjA2NzkwNzEyN30.qS7jxVwu83zEYMvxNo7C_2dtVrSZ6wYIFiNtoN69UkQ');
+  const _cid='Landon Tinker';
+  async function loadSBLinks(){
+    const[{data:soc},{data:news}]=await Promise.all([
+      _sb.from('social_media').select('*').eq('client_id',_cid),
+      _sb.from('news_links').select('*').eq('client_id',_cid)
+    ]);
+    const render=(ids,data)=>ids.forEach(id=>{
+      const el=document.getElementById(id);
+      if(!el||!data)return;
+      el.innerHTML='';
+      data.forEach(l=>{
+        const a=document.createElement('a');
+        a.href=l.url;a.target='_blank';a.rel='noopener noreferrer';a.title=l.name;
+        a.innerHTML='<img src="'+l.icon+'" alt="'+l.name+'" style="width:30px;height:30px;border-radius:4px"/>';
+        el.appendChild(a);
+      });
+    });
+    render(['sml-soc-about'],soc);
+    render(['sml-news-about'],news);
+  }
+  document.addEventListener('DOMContentLoaded',loadSBLinks);
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://landontinker.netlify.app/#person",
+  "name": "Landon Tinker",
+  "jobTitle": "Construction Science Student",
+  "url": "https://landontinker.netlify.app/",
+  "image": "https://landontinker.netlify.app/images/hero.jpg",
+  "description": "Landon Tinker is a construction science student at Texas A&M University with internship experience at David Weekley Homes and Shellback Construction, and seven years of volunteer homebuilding in Costa Rica.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "College Station",
+    "addressRegion": "TX",
+    "addressCountry": "US"
+  },
+  "sameAs": [
+    "https://www.instagram.com/landon_tinker/",
+    "https://www.linkedin.com/in/landon-tinker-754270268",
+    "https://vimeo.com/landontinker",
+    "https://www.reddit.com/user/LandonTinker/",
+    "https://www.producthunt.com/@landontinker",
+    "https://gravatar.com/landontinker",
+    "https://es.quora.com/profile/Landon-Tinker",
+    "https://dribbble.com/landontinker",
+    "https://venture.angellist.com/v/landon-tinker/i/landon-tinker/portfolio/dashboard",
+    "https://www.f6s.com/landon-tinker",
+    "https://landontinker.com/"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://landontinker.netlify.app/#website",
+  "name": "Landon Tinker",
+  "url": "https://landontinker.netlify.app/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "url": "https://landontinker.netlify.app/about.html",
+  "name": "About Landon Tinker",
+  "mainEntity": {
+    "@id": "https://landontinker.netlify.app/#person"
+  }
+}
+</script>
+</head>
+<body>
+
+<!-- ══ NAV ═══════════════════════════════════════════════════════ -->
+<nav id="main-nav">
+  <a class="nav-logo" href="/">Landon<span> Tinker</span></a>
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a class="active" href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ══ PAGE HERO ═════════════════════════════════════════════════ -->
+<div class="pg-hero">
+  <p class="eyebrow" style="color:rgba(255,255,255,.55)">Learn More</p>
+  <h1>Landon Tinker</h1>
+  <p class="pg-sub">Construction science student, homebuilder-in-training, and seven-year volunteer builder.</p>
+</div>
+
+<!-- ══ PROFILE CARD ══════════════════════════════════════════════ -->
+<div class="pc-wrap">
+  <div class="pc">
+    <div class="pc-ph"><img src="images/hero.jpg" alt="Landon Tinker"/></div>
+    <div>
+      <div class="pc-nm">Landon Tinker</div>
+      <div class="pc-rl">Construction Science Student &amp; Future Homebuilder</div>
+      <div class="pc-lc">College Station, Texas</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ ABOUT SECTIONS + SIDEBAR ══════════════════════════════════ -->
+<div class="am-wrap">
+  <div class="am-inner">
+    <div>
+
+      <div class="csec">
+        <p class="cey">Overview</p>
+        <h2>Meet Landon Tinker</h2>
+        <p>Landon Tinker is a construction science student at Texas A&amp;M University, on track to graduate in 2026 after four years of coursework focused on residential and commercial building. He grew up in Dallas, Texas, where he attended Jesuit Dallas High School before heading to College Station for college.</p>
+        <p>What sets Landon apart isn't just his degree program — it's the years of real work behind it. From a fulltime internship with David Weekley Homes to seven straight years of volunteer home construction in Costa Rica, Landon Tinker has logged far more hands-on building hours than most students his age. His <a href="https://www.linkedin.com/in/landon-tinker-754270268" target="_blank" rel="noopener">LinkedIn profile</a> tracks the formal side of that journey; the pages of this site tell the rest of it.</p>
+      </div>
+
+      <div class="csec">
+        <p class="cey">Career Path</p>
+        <h2>From Internships to the Industry</h2>
+        <p>Landon's professional building experience started with Shellback Construction, where he worked as a project intern learning how residential jobs move from blueprint to finished structure. That role led directly to a fulltime internship with David Weekley Homes, one of the largest private homebuilders in the country, where Landon spent the second half of 2025 immersed in the day-to-day realities of production homebuilding.</p>
+        <p>Landon Tinker goes into more depth on both roles, and how each one shaped his next move, in <a href="internships-jobsite-path-construction.html">his article on the path from internships to the jobsite</a>. Together, the two roles gave him a clear-eyed view of the construction industry from both the field and the front office.</p>
+      </div>
+
+      <div class="csec">
+        <p class="cey">Volunteer Work</p>
+        <h2>Seven Years of Homes of Hope</h2>
+        <p>Every November since 2019, Landon has traveled to Costa Rica with his family to build homes through Youth With A Mission's Homes of Hope ministry. It's a trip he's made consistently for seven years — not a one-time service project, but a standing commitment he plans his year around.</p>
+        <p>The work is physically demanding and often unglamorous — framing walls, hauling material, working in Costa Rican heat — but Landon approaches it with the same care he brings to his internships. He writes more about what those trips have meant to him and his family in <a href="building-homes-costa-rica.html">his story on seven years of building homes in Costa Rica</a>, including photos from recent builds on <a href="https://www.instagram.com/landon_tinker/" target="_blank" rel="noopener">his Instagram account</a>.</p>
+      </div>
+
+      <div class="csec">
+        <p class="cey">Education</p>
+        <h2>Texas A&amp;M &amp; Jesuit Dallas</h2>
+        <p>Landon Tinker has been a full-time student at Texas A&amp;M University since 2022, studying construction science with a focus on residential building practices, project management, and materials science. Before College Station, he attended Jesuit Dallas High School, graduating in 2022.</p>
+        <p>Earlier jobs — lifeguarding at Anchor Aquatics, quality assurance work at Calliber Collision, and an internship at AvPro — rounded out his early work experience before he moved into construction specifically. Landon Tinker writes about how those roles built the habits he now relies on at <a href="lifeguard-inspector-intern-lessons-construction.html">a piece on the lessons from his early jobs</a>.</p>
+      </div>
+
+      <div class="csec">
+        <p class="cey">Looking Ahead</p>
+        <h2>What's Next for Landon</h2>
+        <p>As he finishes his degree at Texas A&amp;M, Landon Tinker is looking for a full-time role that lets him keep building — whether that's back with David Weekley Homes, another production homebuilder, or a residential construction firm like Shellback. His internship experience and volunteer background give him a rare combination of field time and formal training for someone still in school.</p>
+        <p>Outside of construction, Landon keeps a running record of his projects and travels on <a href="https://vimeo.com/landontinker" target="_blank" rel="noopener">his Vimeo channel</a> and shares more at <a href="https://landontinker.com/" target="_blank" rel="noopener">landontinker.com</a>. For internship leads, project collaborations, or questions about the Homes of Hope program, <a href="contact.html">reach out through his contact page</a>.</p>
+      </div>
+
+    </div>
+
+    <aside class="sidebar-facts">
+      <div class="sb-box">
+        <div class="sb-title">Quick Facts</div>
+        <div class="fr"><span class="fl">Name</span><span class="fv">Landon Tinker</span></div>
+        <div class="fr"><span class="fl">Hometown</span><span class="fv">Dallas, Texas</span></div>
+        <div class="fr"><span class="fl">University</span><span class="fv">Texas A&amp;M University</span></div>
+        <div class="fr"><span class="fl">Field of Study</span><span class="fv">Construction Science</span></div>
+        <div class="fr"><span class="fl">Volunteering Since</span><span class="fv">2019 (7+ years)</span></div>
+        <div class="fr"><span class="fl">Recent Internship</span><span class="fv">David Weekley Homes</span></div>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<!-- ══ SOCIAL + PRESS ACCORDION ══════════════════════════════════ -->
+<div class="acc-section" style="background:var(--off)">
+  <div class="acc-wrap">
+    <button class="acc-btn" onclick="tog(this,'s-about')">Follow Landon Tinker on Social Media <span class="chevron">&#8964;</span></button>
+    <div class="acc-body" id="s-about"><div id="sml-soc-about" class="social-media-list"></div></div>
+    <button class="acc-btn" onclick="tog(this,'n-about')">Landon Tinker in the Press <span class="chevron">&#8964;</span></button>
+    <div class="acc-body" id="n-about"><div id="sml-news-about" class="social-media-list"></div></div>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2026 Landon Tinker. All rights reserved. &nbsp;|&nbsp; <a href="privacy.html">Privacy Policy</a></p>
+</footer>
+
+<script>
+function tog(btn,id){
+  const c=document.getElementById(id),open=c.classList.contains('open');
+  document.querySelectorAll('.acc-body').forEach(e=>e.classList.remove('open'));
+  document.querySelectorAll('.acc-btn').forEach(e=>e.classList.remove('open'));
+  if(!open){c.classList.add('open');btn.classList.add('open');}
+}
+</script>
+</body>
+</html>
