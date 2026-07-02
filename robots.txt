@@ -1,5 +1,5 @@
 User-agent: *
-Allow: /
+Disallow: /
 Disallow: /privacy.html
 
-Sitemap: https://landontinker.netlify.app/sitemap.xml
+Sitemap: https://landon-tinker.netlify.app/sitemap.xml
