@@ -1,5 +1,5 @@
 User-agent: *
-Disallow: /
+Allow: /
 Disallow: /privacy.html
 
 Sitemap: https://landon-tinker.netlify.app/sitemap.xml
